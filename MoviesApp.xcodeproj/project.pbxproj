@@ -21,6 +21,7 @@
 		0E9BC3D31F15545A0032CC05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC3CC1F1554440032CC05 /* Alamofire.framework */; };
 		0E9BC3D61F1555E00032CC05 /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3D51F1555E00032CC05 /* APIClient.swift */; };
 		0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3D91F1557B90032CC05 /* Networking-Alamofire.swift */; };
+		0E9BC3DE1F155C710032CC05 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3DD1F155C710032CC05 /* RequestParameters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		0E9BC3CC1F1554440032CC05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		0E9BC3D51F1555E00032CC05 /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		0E9BC3D91F1557B90032CC05 /* Networking-Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking-Alamofire.swift"; sourceTree = "<group>"; };
+		0E9BC3DD1F155C710032CC05 /* RequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +146,7 @@
 			children = (
 				0E9BC3D91F1557B90032CC05 /* Networking-Alamofire.swift */,
 				0E9BC3D51F1555E00032CC05 /* APIClient.swift */,
+				0E9BC3DD1F155C710032CC05 /* RequestParameters.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -254,6 +257,7 @@
 				0E54123E1F154ADE00099B8C /* ViewController.swift in Sources */,
 				0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */,
 				0E54123C1F154ADE00099B8C /* AppDelegate.swift in Sources */,
+				0E9BC3DE1F155C710032CC05 /* RequestParameters.swift in Sources */,
 				0E9BC3D61F1555E00032CC05 /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
