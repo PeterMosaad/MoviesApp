@@ -13,6 +13,12 @@
 		0E5412431F154ADE00099B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5412421F154ADE00099B8C /* Assets.xcassets */; };
 		0E5412461F154ADE00099B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5412441F154ADE00099B8C /* LaunchScreen.storyboard */; };
 		0E5412511F154ADE00099B8C /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5412501F154ADE00099B8C /* MoviesAppTests.swift */; };
+		0E9BC3CD1F1554440032CC05 /* Unbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC3CA1F1554440032CC05 /* Unbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E9BC3CE1F1554440032CC05 /* Siesta.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E9BC3CF1F1554440032CC05 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC3CC1F1554440032CC05 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E9BC3D11F15545A0032CC05 /* Unbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC3CA1F1554440032CC05 /* Unbox.framework */; };
+		0E9BC3D21F15545A0032CC05 /* Siesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; };
+		0E9BC3D31F15545A0032CC05 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC3CC1F1554440032CC05 /* Alamofire.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +31,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		0E9BC3C91F15541C0032CC05 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0E9BC3CD1F1554440032CC05 /* Unbox.framework in CopyFiles */,
+				0E9BC3CE1F1554440032CC05 /* Siesta.framework in CopyFiles */,
+				0E9BC3CF1F1554440032CC05 /* Alamofire.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		0E5412381F154ADE00099B8C /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E54123B1F154ADE00099B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +57,9 @@
 		0E54124C1F154ADE00099B8C /* MoviesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E5412501F154ADE00099B8C /* MoviesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppTests.swift; sourceTree = "<group>"; };
 		0E5412521F154ADE00099B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0E9BC3CA1F1554440032CC05 /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = ../Carthage/Build/iOS/Unbox.framework; sourceTree = "<group>"; };
+		0E9BC3CB1F1554440032CC05 /* Siesta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Siesta.framework; path = ../Carthage/Build/iOS/Siesta.framework; sourceTree = "<group>"; };
+		0E9BC3CC1F1554440032CC05 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = ../Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +67,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9BC3D11F15545A0032CC05 /* Unbox.framework in Frameworks */,
+				0E9BC3D21F15545A0032CC05 /* Siesta.framework in Frameworks */,
+				0E9BC3D31F15545A0032CC05 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +110,7 @@
 				0E5412421F154ADE00099B8C /* Assets.xcassets */,
 				0E5412441F154ADE00099B8C /* LaunchScreen.storyboard */,
 				0E5412471F154ADE00099B8C /* Info.plist */,
+				0E9BC3D01F15544B0032CC05 /* Frameworks */,
 			);
 			path = MoviesApp;
 			sourceTree = "<group>";
@@ -96,6 +124,16 @@
 			path = MoviesAppTests;
 			sourceTree = "<group>";
 		};
+		0E9BC3D01F15544B0032CC05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E9BC3CA1F1554440032CC05 /* Unbox.framework */,
+				0E9BC3CB1F1554440032CC05 /* Siesta.framework */,
+				0E9BC3CC1F1554440032CC05 /* Alamofire.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +144,7 @@
 				0E5412341F154ADE00099B8C /* Sources */,
 				0E5412351F154ADE00099B8C /* Frameworks */,
 				0E5412361F154ADE00099B8C /* Resources */,
+				0E9BC3C91F15541C0032CC05 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -338,6 +377,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = organization.MoviesApp;
@@ -350,6 +393,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MoviesApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = organization.MoviesApp;
