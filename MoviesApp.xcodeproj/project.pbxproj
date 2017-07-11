@@ -23,6 +23,7 @@
 		0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3D91F1557B90032CC05 /* Networking-Alamofire.swift */; };
 		0E9BC3DE1F155C710032CC05 /* RequestParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3DD1F155C710032CC05 /* RequestParameters.swift */; };
 		0E9BC3E11F1561870032CC05 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3E01F1561870032CC05 /* Movie.swift */; };
+		0E9BC3E31F1562980032CC05 /* SearchMoviesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3E21F1562980032CC05 /* SearchMoviesAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0E9BC3D91F1557B90032CC05 /* Networking-Alamofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Networking-Alamofire.swift"; sourceTree = "<group>"; };
 		0E9BC3DD1F155C710032CC05 /* RequestParameters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestParameters.swift; sourceTree = "<group>"; };
 		0E9BC3E01F1561870032CC05 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0E9BC3E21F1562980032CC05 /* SearchMoviesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				0E9BC3D91F1557B90032CC05 /* Networking-Alamofire.swift */,
 				0E9BC3D51F1555E00032CC05 /* APIClient.swift */,
 				0E9BC3DD1F155C710032CC05 /* RequestParameters.swift */,
+				0E9BC3E21F1562980032CC05 /* SearchMoviesAPIClient.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9BC3E31F1562980032CC05 /* SearchMoviesAPIClient.swift in Sources */,
 				0E54123E1F154ADE00099B8C /* ViewController.swift in Sources */,
 				0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */,
 				0E9BC3E11F1561870032CC05 /* Movie.swift in Sources */,

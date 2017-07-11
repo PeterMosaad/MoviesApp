@@ -11,7 +11,14 @@ import Siesta
 import Alamofire
 import Unbox
 
-let baseServiceURL = "http://api.themoviedb.org/3/"
+let baseServiceURL = "https://api.themoviedb.org/3/"
+
+/**
+ A struct the encapsulates all service paths for better access
+ */
+struct ServicePath {
+  static let searchMovies = "/search/movie"
+}
 
 fileprivate var singleton: ApiClient?
 
@@ -54,5 +61,17 @@ public class ApiClient: Service {
     configure {
       $0.pipeline[.parsing].add(unboxerTransformer, contentTypes: ["*/json"])
     }
+    configureForMovieesService()
+  }
+}
+
+
+internal extension Resource {
+  internal func withParams(_ dictionary: [String: String?]) -> Siesta.Resource {
+    var resource = self
+    for (key, value) in dictionary {
+      resource = resource.withParam(key, value)
+    }
+    return resource
   }
 }
