@@ -1,0 +1,6 @@
+#Api
+github "bustoutsolutions/siesta" ~> 1.0
+github "Alamofire/Alamofire" ~> 4.0
+
+#Parsing
+github "johnsundell/unbox" ~> 2.5.0
