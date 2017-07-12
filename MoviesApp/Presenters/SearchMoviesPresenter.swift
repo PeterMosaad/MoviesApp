@@ -51,6 +51,10 @@ class SearchMoviesPresenter {
   }
 
   func searchButtonClicked(searchQuery: String) {
+    guard searchQuery.characters.count > 0 else {
+      viewController?.showError(message: "Please enter search query")
+      return
+    }
     viewController?.showLoadingView()
     viewController?.refreshSuggestionsTable(resutls: [])
     moviesProvider.searchMovies(query: searchQuery) { [weak self] (moviesList, error) in

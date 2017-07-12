@@ -56,9 +56,7 @@ class MoviesManager: MoviesProvider {
           completion(values, nil)
         }
       case .error:
-        if let error = resource.latestError?.cause {
-          completion(nil, error)
-        }
+        completion(nil, resource.latestError?.cause)
         break
       default:
         return
