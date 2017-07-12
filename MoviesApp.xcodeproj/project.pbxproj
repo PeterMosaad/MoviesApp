@@ -40,6 +40,7 @@
 		0EB2F1EA1F16E5E9003547D4 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */; };
 		0EB2F1EB1F16E699003547D4 /* Siesta.framework in Resources */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; };
 		0EB2F1EC1F16E6A5003547D4 /* Siesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; };
+		0EB2F1EE1F16EC2A003547D4 /* CachingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +101,7 @@
 		0E9BC40F1F16B7B40032CC05 /* MoviesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		0EB2F1E51F16D7D7003547D4 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
 		0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingProviderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 				0E5412501F154ADE00099B8C /* MoviesAppTests.swift */,
 				0E5412521F154ADE00099B8C /* Info.plist */,
 				0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */,
+				0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */,
 			);
 			path = MoviesAppTests;
 			sourceTree = "<group>";
@@ -370,6 +373,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5412511F154ADE00099B8C /* MoviesAppTests.swift in Sources */,
+				0EB2F1EE1F16EC2A003547D4 /* CachingProviderTests.swift in Sources */,
 				0EB2F1EA1F16E5E9003547D4 /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
