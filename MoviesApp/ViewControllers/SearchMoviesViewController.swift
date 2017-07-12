@@ -20,8 +20,7 @@ class SearchMoviesViewController: UIViewController {
   fileprivate lazy var presenter: SearchMoviesPresenter = {
     let diProvider = DependeciesProvider.sharedInstance
     return SearchMoviesPresenter(moviesProvider: diProvider.moviesProvider(),
-                                 viewController: self,
-                                 posterBuilder: diProvider.moviesPosterURLBuilder())
+                                 viewController: self)
   }()
 
   override func viewDidLoad() {
@@ -91,7 +90,7 @@ extension SearchMoviesViewController: SearchMoviesScreen {
     present(alert, animated: true, completion: nil)
   }
 
-  func openMoviesListScreen(moviesList: [MovieViewModel], searchQuery: String) {
+  func openMoviesListScreen(moviesList: [Movie], searchQuery: String) {
     navigationController?.pushViewController(UIViewController(), animated: true)
   }
 }

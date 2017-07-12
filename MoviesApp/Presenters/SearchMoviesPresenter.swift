@@ -13,19 +13,17 @@ protocol SearchMoviesScreen: class {
   func showLoadingView()
   func hideLoadingView()
   func showError(message: String)
-  func openMoviesListScreen(moviesList: [MovieViewModel], searchQuery: String)
+  func openMoviesListScreen(moviesList: [Movie], searchQuery: String)
   func clearSearchText()
 }
 
 class SearchMoviesPresenter {
   private let moviesProvider: MoviesProvider
-  private let posterURLBuilder: MoviesPosterURLBuilder
   weak private var viewController: SearchMoviesScreen?
 
-  init(moviesProvider: MoviesProvider, viewController: SearchMoviesScreen, posterBuilder: MoviesPosterURLBuilder) {
+  init(moviesProvider: MoviesProvider, viewController: SearchMoviesScreen) {
     self.moviesProvider = moviesProvider
     self.viewController = viewController
-    self.posterURLBuilder = posterBuilder
   }
 
   private func messageFrom(error: Error?) -> String {
@@ -34,14 +32,6 @@ class SearchMoviesPresenter {
       errorMsg = err.localizedDescription
     }
     return errorMsg
-  }
-
-  private func viewModelsFrom(moviesList: [Movie]) -> [MovieViewModel] {
-    var viewModels = [MovieViewModel]()
-    for movie in moviesList {
-      viewModels.append(MovieViewModel(movie: movie, posterURLBuilder: posterURLBuilder))
-    }
-    return viewModels
   }
 
   func searchTextFieldChanged(text: String) {
@@ -61,9 +51,8 @@ class SearchMoviesPresenter {
       guard let `self` = self else { return }
       self.viewController?.hideLoadingView()
       if let results = moviesList, results.count > 0 {
-        let viewModels = self.viewModelsFrom(moviesList: results)
         self.viewController?.clearSearchText()
-        self.viewController?.openMoviesListScreen(moviesList: viewModels, searchQuery: searchQuery)
+        self.viewController?.openMoviesListScreen(moviesList: results, searchQuery: searchQuery)
       } else {
         self.viewController?.showError(message: self.messageFrom(error: error))
       }
