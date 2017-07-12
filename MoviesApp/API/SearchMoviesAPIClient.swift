@@ -13,11 +13,11 @@ import Unbox
 /**
  Classes implementing this protocol should provide a read-only Siesta Resource for SearchMovies
  */
-protocol SearchRestaurntsServiceClient {
+protocol SearchMoviesServiceClient {
   func searchMovies(_ requestParams: SearchMovieRequestParameters) -> Resource
 }
 
-extension ApiClient: SearchRestaurntsServiceClient {
+extension ApiClient: SearchMoviesServiceClient {
   func searchMovies(_ requestParams: SearchMovieRequestParameters) -> Resource {
     return resource(ServicePath.searchMovies).withParams(requestParams.queryRepresentation())
   }

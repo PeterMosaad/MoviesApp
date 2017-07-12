@@ -1,26 +1,93 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lnP-S1-1Uw">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Navigation Controller-->
+        <scene sceneID="pt4-8w-bTn">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController id="lnP-S1-1Uw" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="obe-n6-cEd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Ij0-DP-pf6" kind="relationship" relationship="rootViewController" id="RQ7-5m-WXc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TtT-Bl-Alx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--Search Movies View Controller-->
+        <scene sceneID="aDT-GF-zdw">
+            <objects>
+                <viewController id="Ij0-DP-pf6" customClass="SearchMoviesViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="cNf-Q8-z9L"/>
+                        <viewControllerLayoutGuide type="bottom" id="t97-AA-ru5"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="43N-q4-G2a">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter search query" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pwb-2k-lVm">
+                                <rect key="frame" x="49.5" y="100" width="275" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Ij0-DP-pf6" id="rO0-HB-AwW"/>
+                                </connections>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="N6I-Rq-pYt">
+                                <rect key="frame" x="49" y="131" width="275" height="0.0"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="MqG-PT-Atb"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="dataSource" destination="Ij0-DP-pf6" id="q8T-qx-jdU"/>
+                                    <outlet property="delegate" destination="Ij0-DP-pf6" id="K8H-kP-I0X"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="peW-9Z-PZd">
+                                <rect key="frame" x="123" y="598" width="127" height="30"/>
+                                <state key="normal" title="Search Movies"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="Ij0-DP-pf6" eventType="touchUpInside" id="gfq-ax-U2V"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pwb-2k-lVm" firstAttribute="top" secondItem="cNf-Q8-z9L" secondAttribute="bottom" constant="36" id="37M-KU-XDh"/>
+                            <constraint firstItem="N6I-Rq-pYt" firstAttribute="top" secondItem="pwb-2k-lVm" secondAttribute="bottom" constant="1" id="JFy-72-mNq"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="peW-9Z-PZd" secondAttribute="trailing" constant="109.03522205206735" id="ait-RW-QP4"/>
+                            <constraint firstItem="N6I-Rq-pYt" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="33" id="dGr-l4-vfd"/>
+                            <constraint firstItem="t97-AA-ru5" firstAttribute="top" secondItem="peW-9Z-PZd" secondAttribute="bottom" constant="39.000000000000114" id="h9P-md-0gm"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pwb-2k-lVm" secondAttribute="trailing" constant="34.5" id="hnh-uV-AfT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N6I-Rq-pYt" secondAttribute="trailing" constant="35.000000000000057" id="lUZ-Kl-qWX"/>
+                            <constraint firstItem="pwb-2k-lVm" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="33.5" id="uq7-2m-Yj9"/>
+                            <constraint firstItem="peW-9Z-PZd" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="106.96477794793259" id="x9Y-4w-YZE"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="7Pa-M2-FsU"/>
+                    <connections>
+                        <outlet property="searchTextField" destination="pwb-2k-lVm" id="Yjc-n6-LH4"/>
+                        <outlet property="suggestionTableHeightConstraint" destination="MqG-PT-Atb" id="KRd-kv-NsW"/>
+                        <outlet property="suggestionsTableView" destination="N6I-Rq-pYt" id="m3v-aL-jYp"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="73q-UN-bRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-108" y="274.81259370314842"/>
         </scene>
     </scenes>
 </document>

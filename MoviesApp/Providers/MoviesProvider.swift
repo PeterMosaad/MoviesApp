@@ -14,13 +14,13 @@ protocol MoviesProvider {
 }
 
 class MoviesManager: MoviesProvider {
-  private let apiClient: ApiClient
+  private let searchClient: SearchMoviesServiceClient
   private let cachingProvider: CachingProvider
   private let maxCacheSize: Int
   private let cachingKey = "queriesCachingKeys"
 
-  init(apiClient: ApiClient, cachingProvider: CachingProvider, maxCacheSize: Int) {
-    self.apiClient = apiClient
+  init(searchClient: SearchMoviesServiceClient, cachingProvider: CachingProvider, maxCacheSize: Int) {
+    self.searchClient = searchClient
     self.cachingProvider = cachingProvider
     self.maxCacheSize = maxCacheSize
   }
@@ -44,7 +44,7 @@ class MoviesManager: MoviesProvider {
 
     let parameters = SearchMovieRequestParameters(searchQuery: query)
 
-    apiClient.searchMovies(parameters).addObserver(owner: self, closure: { [weak self] (resource, event) in
+    searchClient.searchMovies(parameters).addObserver(owner: self, closure: { [weak self] (resource, event) in
       guard let `self` = self else { return }
 
       switch event {

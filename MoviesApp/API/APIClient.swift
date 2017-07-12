@@ -11,8 +11,6 @@ import Siesta
 import Alamofire
 import Unbox
 
-let baseServiceURL = "https://api.themoviedb.org/3/"
-
 /**
  A struct the encapsulates all service paths for better access
  */
