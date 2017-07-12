@@ -18,7 +18,7 @@ struct MovieViewModel {
   let overView: String
   let posterURL: String
 
-  init(movie: MovieViewModel, posterURLBuilder: MoviesPosterURLBuilder) {
+  init(movie: Movie, posterURLBuilder: MoviesPosterURLBuilder) {
     name = movie.name
     releaseDate = movie.releaseDate
     overView = movie.overView

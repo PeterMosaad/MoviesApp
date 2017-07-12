@@ -27,6 +27,7 @@
 		0E9BC3E91F156D7C0032CC05 /* CachingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3E81F156D7C0032CC05 /* CachingProvider.swift */; };
 		0E9BC3EB1F1575980032CC05 /* MoviesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3EA1F1575980032CC05 /* MoviesProvider.swift */; };
 		0E9BC3F21F15B5780032CC05 /* MoviesViewModelBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3F11F15B5780032CC05 /* MoviesViewModelBuilder.swift */; };
+		0E9BC3F71F15BA3D0032CC05 /* SearchMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3F61F15BA3D0032CC05 /* SearchMoviesPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		0E9BC3E81F156D7C0032CC05 /* CachingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingProvider.swift; sourceTree = "<group>"; };
 		0E9BC3EA1F1575980032CC05 /* MoviesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesProvider.swift; sourceTree = "<group>"; };
 		0E9BC3F11F15B5780032CC05 /* MoviesViewModelBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesViewModelBuilder.swift; sourceTree = "<group>"; };
+		0E9BC3F61F15BA3D0032CC05 /* SearchMoviesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				0E9BC3D41F1555E00032CC05 /* API */,
 				0E9BC3DF1F1561780032CC05 /* Model */,
 				0E9BC3E71F156D620032CC05 /* Providers */,
+				0E9BC3F51F15BA3D0032CC05 /* Presenters */,
 				0E54123D1F154ADE00099B8C /* ViewController.swift */,
 				0E54123B1F154ADE00099B8C /* AppDelegate.swift */,
 				0E54123F1F154ADE00099B8C /* Main.storyboard */,
@@ -180,6 +183,14 @@
 				0E9BC3F11F15B5780032CC05 /* MoviesViewModelBuilder.swift */,
 			);
 			path = Providers;
+			sourceTree = "<group>";
+		};
+		0E9BC3F51F15BA3D0032CC05 /* Presenters */ = {
+			isa = PBXGroup;
+			children = (
+				0E9BC3F61F15BA3D0032CC05 /* SearchMoviesPresenter.swift */,
+			);
+			path = Presenters;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +303,7 @@
 				0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */,
 				0E9BC3E11F1561870032CC05 /* Movie.swift in Sources */,
 				0E54123C1F154ADE00099B8C /* AppDelegate.swift in Sources */,
+				0E9BC3F71F15BA3D0032CC05 /* SearchMoviesPresenter.swift in Sources */,
 				0E9BC3F21F15B5780032CC05 /* MoviesViewModelBuilder.swift in Sources */,
 				0E9BC3DE1F155C710032CC05 /* RequestParameters.swift in Sources */,
 				0E9BC3D61F1555E00032CC05 /* APIClient.swift in Sources */,
