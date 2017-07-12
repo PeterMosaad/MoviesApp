@@ -15,11 +15,30 @@ class MoviesListViewController: UIViewController {
   var moviesViewModelList: [MovieViewModel]?
   fileprivate lazy var presenter: MoviesListPresenter = {
     let diProvider = DependeciesProvider.sharedInstance
-    return MoviesListPresenter(moviesProvider: diProvider.moviesProvider(),
+    return MoviesListPresenter(searchClient: diProvider.searchMoviesClient(),
                                viewController: self,
                                posterBuilder: diProvider.moviesPosterURLBuilder())
   }()
+  fileprivate lazy var refreshControl: UIRefreshControl = {
+    let refreshControl = UIRefreshControl()
+    refreshControl.addTarget(self, action: #selector(handleRefresh(_:)),
+                             for: UIControlEvents.valueChanged)
+    refreshControl.tintColor = UIColor.red
+    return refreshControl
+  }()
 
+  override func viewDidLoad() {
+    moviesTableView.addSubview(self.refreshControl)
+  }
+
+  func updateWith(initialMoviesList: [Movie], searchQuery: String) {
+    _ = view // Force calling View to get tableView initialized
+    presenter.gotInitial(moviesList: initialMoviesList, searchQuery: searchQuery)
+  }
+
+  @objc private func handleRefresh(_ refreshControl: UIRefreshControl) {
+    presenter.pullToRefreshTriggered()
+  }
 }
 
 extension MoviesListViewController: MoviesListScreen {
@@ -30,7 +49,7 @@ extension MoviesListViewController: MoviesListScreen {
   }
 
   func endTableRefreshing() {
-    
+    refreshControl.endRefreshing()
   }
 }
 
@@ -44,7 +63,7 @@ extension MoviesListViewController: UITableViewDataSource {
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
     if let list = moviesViewModelList, list.count > indexPath.row {
-      //cell.textLabel?.text = list[indexPath.row]
+      cell.textLabel?.text = list[indexPath.row].name
     }
     return cell
   }

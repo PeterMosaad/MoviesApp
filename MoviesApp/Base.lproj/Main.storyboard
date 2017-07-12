@@ -25,6 +25,43 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TtT-Bl-Alx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--Movies List View Controller-->
+        <scene sceneID="psz-Ex-lIk">
+            <objects>
+                <viewController storyboardIdentifier="MoviesListViewController" id="pK0-5K-hw7" customClass="MoviesListViewController" customModule="MoviesApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bgf-ln-VEC"/>
+                        <viewControllerLayoutGuide type="bottom" id="DJa-aw-9PR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pqW-zR-EwH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="O3A-Gu-GAg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="pK0-5K-hw7" id="lgT-a0-BEA"/>
+                                    <outlet property="delegate" destination="pK0-5K-hw7" id="hTP-im-mhh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="O3A-Gu-GAg" firstAttribute="leading" secondItem="pqW-zR-EwH" secondAttribute="leadingMargin" constant="-16" id="5Gs-7Y-QwX"/>
+                            <constraint firstItem="DJa-aw-9PR" firstAttribute="top" secondItem="O3A-Gu-GAg" secondAttribute="bottom" id="73f-9j-qS1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="O3A-Gu-GAg" secondAttribute="trailing" constant="-16" id="ajl-cR-d4K"/>
+                            <constraint firstItem="O3A-Gu-GAg" firstAttribute="top" secondItem="bgf-ln-VEC" secondAttribute="bottom" constant="-20" id="usd-rT-MHv"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="moviesTableView" destination="O3A-Gu-GAg" id="0eN-2N-L1Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gaI-Oe-ZHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1452" y="442"/>
+        </scene>
         <!--Search Movies View Controller-->
         <scene sceneID="aDT-GF-zdw">
             <objects>

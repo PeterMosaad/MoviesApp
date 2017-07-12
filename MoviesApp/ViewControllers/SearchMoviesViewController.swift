@@ -91,7 +91,11 @@ extension SearchMoviesViewController: SearchMoviesScreen {
   }
 
   func openMoviesListScreen(moviesList: [Movie], searchQuery: String) {
-    navigationController?.pushViewController(UIViewController(), animated: true)
+    let storyboard = UIStoryboard(name: "Main", bundle: nil)
+    if let controller = storyboard.instantiateViewController(withIdentifier: "MoviesListViewController") as? MoviesListViewController {
+      controller.updateWith(initialMoviesList: moviesList, searchQuery: searchQuery)
+      navigationController?.pushViewController(controller, animated: true)
+    }
   }
 }
 
