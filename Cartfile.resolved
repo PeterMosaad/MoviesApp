@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" "4.5.0"
 github "bustoutsolutions/siesta" "1.1.1"
+github "jdg/MBProgressHUD" "1.0.0"
 github "johnsundell/unbox" "2.5.0"
