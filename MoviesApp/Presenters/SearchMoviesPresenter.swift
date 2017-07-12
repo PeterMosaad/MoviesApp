@@ -14,6 +14,7 @@ protocol SearchMoviesScreen: class {
   func hideLoadingView()
   func showError(message: String)
   func openMoviesListScreen(moviesList: [MovieViewModel], searchQuery: String)
+  func clearSearchText()
 }
 
 class SearchMoviesPresenter {
@@ -51,11 +52,13 @@ class SearchMoviesPresenter {
 
   func searchButtonClicked(searchQuery: String) {
     viewController?.showLoadingView()
+    viewController?.refreshSuggestionsTable(resutls: [])
     moviesProvider.searchMovies(query: searchQuery) { [weak self] (moviesList, error) in
       guard let `self` = self else { return }
       self.viewController?.hideLoadingView()
       if let results = moviesList, results.count > 0 {
         let viewModels = self.viewModelsFrom(moviesList: results)
+        self.viewController?.clearSearchText()
         self.viewController?.openMoviesListScreen(moviesList: viewModels, searchQuery: searchQuery)
       } else {
         self.viewController?.showError(message: self.messageFrom(error: error))

@@ -47,7 +47,7 @@
                                 </connections>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="25" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="N6I-Rq-pYt">
-                                <rect key="frame" x="49" y="131" width="275" height="0.0"/>
+                                <rect key="frame" x="39" y="131" width="275" height="0.0"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" id="MqG-PT-Atb"/>
@@ -70,16 +70,17 @@
                             <constraint firstItem="pwb-2k-lVm" firstAttribute="top" secondItem="cNf-Q8-z9L" secondAttribute="bottom" constant="36" id="37M-KU-XDh"/>
                             <constraint firstItem="N6I-Rq-pYt" firstAttribute="top" secondItem="pwb-2k-lVm" secondAttribute="bottom" constant="1" id="JFy-72-mNq"/>
                             <constraint firstAttribute="trailingMargin" secondItem="peW-9Z-PZd" secondAttribute="trailing" constant="109.03522205206735" id="ait-RW-QP4"/>
-                            <constraint firstItem="N6I-Rq-pYt" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="33" id="dGr-l4-vfd"/>
+                            <constraint firstItem="N6I-Rq-pYt" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="23" id="dGr-l4-vfd"/>
                             <constraint firstItem="t97-AA-ru5" firstAttribute="top" secondItem="peW-9Z-PZd" secondAttribute="bottom" constant="39.000000000000114" id="h9P-md-0gm"/>
                             <constraint firstAttribute="trailingMargin" secondItem="pwb-2k-lVm" secondAttribute="trailing" constant="34.5" id="hnh-uV-AfT"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="N6I-Rq-pYt" secondAttribute="trailing" constant="35.000000000000057" id="lUZ-Kl-qWX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="N6I-Rq-pYt" secondAttribute="trailing" constant="45" id="lUZ-Kl-qWX"/>
                             <constraint firstItem="pwb-2k-lVm" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="33.5" id="uq7-2m-Yj9"/>
                             <constraint firstItem="peW-9Z-PZd" firstAttribute="leading" secondItem="43N-q4-G2a" secondAttribute="leadingMargin" constant="106.96477794793259" id="x9Y-4w-YZE"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7Pa-M2-FsU"/>
                     <connections>
+                        <outlet property="searchButton" destination="peW-9Z-PZd" id="Y10-L0-Dlz"/>
                         <outlet property="searchTextField" destination="pwb-2k-lVm" id="Yjc-n6-LH4"/>
                         <outlet property="suggestionTableHeightConstraint" destination="MqG-PT-Atb" id="KRd-kv-NsW"/>
                         <outlet property="suggestionsTableView" destination="N6I-Rq-pYt" id="m3v-aL-jYp"/>
@@ -87,7 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73q-UN-bRF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-108" y="274.81259370314842"/>
+            <point key="canvasLocation" x="33" y="806"/>
         </scene>
     </scenes>
 </document>

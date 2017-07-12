@@ -50,8 +50,10 @@ class MoviesManager: MoviesProvider {
       switch event {
       case .newData, .notModified:
         if let values = resource.latestData?.content as? [Movie] {
-          self.addSearchQueryToCache(query: self.cachingKey)
-          completion(values, nil)
+          if values.count > 0 {
+            self.addSearchQueryToCache(query: query)
+            completion(values, nil)
+          }
         }
       case .error:
         if let error = resource.latestError?.cause {

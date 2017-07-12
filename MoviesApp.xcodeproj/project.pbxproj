@@ -30,6 +30,7 @@
 		0E9BC3F71F15BA3D0032CC05 /* SearchMoviesPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3F61F15BA3D0032CC05 /* SearchMoviesPresenter.swift */; };
 		0E9BC3FC1F15C34A0032CC05 /* DependeciesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3FB1F15C34A0032CC05 /* DependeciesProvider.swift */; };
 		0E9BC3FE1F15C3A50032CC05 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3FD1F15C3A50032CC05 /* Constants.swift */; };
+		0E9BC4011F15C7BD0032CC05 /* SearchMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC4001F15C7BD0032CC05 /* SearchMoviesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		0E9BC3F61F15BA3D0032CC05 /* SearchMoviesPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesPresenter.swift; sourceTree = "<group>"; };
 		0E9BC3FB1F15C34A0032CC05 /* DependeciesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DependeciesProvider.swift; sourceTree = "<group>"; };
 		0E9BC3FD1F15C3A50032CC05 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E9BC4001F15C7BD0032CC05 /* SearchMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,8 +133,9 @@
 				0E9BC3DF1F1561780032CC05 /* Model */,
 				0E9BC3E71F156D620032CC05 /* Providers */,
 				0E9BC3F51F15BA3D0032CC05 /* Presenters */,
-				0E54123D1F154ADE00099B8C /* ViewController.swift */,
+				0E9BC3FF1F15C7BD0032CC05 /* ViewControllers */,
 				0E54123B1F154ADE00099B8C /* AppDelegate.swift */,
+				0E54123D1F154ADE00099B8C /* ViewController.swift */,
 				0E54123F1F154ADE00099B8C /* Main.storyboard */,
 				0E5412421F154ADE00099B8C /* Assets.xcassets */,
 				0E5412441F154ADE00099B8C /* LaunchScreen.storyboard */,
@@ -197,6 +200,14 @@
 				0E9BC3F61F15BA3D0032CC05 /* SearchMoviesPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		0E9BC3FF1F15C7BD0032CC05 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0E9BC4001F15C7BD0032CC05 /* SearchMoviesViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -304,6 +315,7 @@
 			files = (
 				0E9BC3EB1F1575980032CC05 /* MoviesProvider.swift in Sources */,
 				0E9BC3E91F156D7C0032CC05 /* CachingProvider.swift in Sources */,
+				0E9BC4011F15C7BD0032CC05 /* SearchMoviesViewController.swift in Sources */,
 				0E9BC3E31F1562980032CC05 /* SearchMoviesAPIClient.swift in Sources */,
 				0E54123E1F154ADE00099B8C /* ViewController.swift in Sources */,
 				0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */,
