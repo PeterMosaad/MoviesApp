@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0E54123C1F154ADE00099B8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54123B1F154ADE00099B8C /* AppDelegate.swift */; };
-		0E54123E1F154ADE00099B8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E54123D1F154ADE00099B8C /* ViewController.swift */; };
 		0E5412411F154ADE00099B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54123F1F154ADE00099B8C /* Main.storyboard */; };
 		0E5412431F154ADE00099B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5412421F154ADE00099B8C /* Assets.xcassets */; };
 		0E5412461F154ADE00099B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5412441F154ADE00099B8C /* LaunchScreen.storyboard */; };
@@ -70,7 +69,6 @@
 /* Begin PBXFileReference section */
 		0E5412381F154ADE00099B8C /* MoviesApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MoviesApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E54123B1F154ADE00099B8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0E54123D1F154ADE00099B8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0E5412401F154ADE00099B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E5412421F154ADE00099B8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0E5412451F154ADE00099B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -151,7 +149,6 @@
 				0E9BC3F51F15BA3D0032CC05 /* Presenters */,
 				0E9BC3FF1F15C7BD0032CC05 /* ViewControllers */,
 				0E54123B1F154ADE00099B8C /* AppDelegate.swift */,
-				0E54123D1F154ADE00099B8C /* ViewController.swift */,
 				0E54123F1F154ADE00099B8C /* Main.storyboard */,
 				0E5412421F154ADE00099B8C /* Assets.xcassets */,
 				0E5412441F154ADE00099B8C /* LaunchScreen.storyboard */,
@@ -348,7 +345,6 @@
 				0E9BC4091F15E9BB0032CC05 /* MoviesListPresenter.swift in Sources */,
 				0E9BC4011F15C7BD0032CC05 /* SearchMoviesViewController.swift in Sources */,
 				0E9BC3E31F1562980032CC05 /* SearchMoviesAPIClient.swift in Sources */,
-				0E54123E1F154ADE00099B8C /* ViewController.swift in Sources */,
 				0E9BC3DA1F1557B90032CC05 /* Networking-Alamofire.swift in Sources */,
 				0E9BC4101F16B7B40032CC05 /* MoviesListViewController.swift in Sources */,
 				0E9BC3E11F1561870032CC05 /* Movie.swift in Sources */,
