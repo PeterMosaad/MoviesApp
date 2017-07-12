@@ -27,8 +27,16 @@ class MoviesListViewController: UIViewController {
     return refreshControl
   }()
 
-  override func viewDidLoad() {
+  private func prepareTableView() {
+
     moviesTableView.addSubview(self.refreshControl)
+    moviesTableView.rowHeight = UITableViewAutomaticDimension;
+    moviesTableView.estimatedRowHeight = 140.0;
+    moviesTableView.sectionHeaderHeight = UITableViewAutomaticDimension;
+  }
+
+  override func viewDidLoad() {
+    prepareTableView()
   }
 
   func updateWith(initialMoviesList: [Movie], searchQuery: String) {
@@ -61,9 +69,12 @@ extension MoviesListViewController: UITableViewDataSource {
   }
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: nil)
-    if let list = moviesViewModelList, list.count > indexPath.row {
-      cell.textLabel?.text = list[indexPath.row].name
+    var cell: UITableViewCell = UITableViewCell()
+    if let dequeuedCell = tableView.dequeueReusableCell(withIdentifier: MovieCell.cellIdentifier()) as? MovieCell {
+      if let viewModels = moviesViewModelList, viewModels.count > indexPath.row {
+        dequeuedCell.updateCell(movieViewModel: viewModels[indexPath.row])
+      }
+      cell = dequeuedCell
     }
     return cell
   }
