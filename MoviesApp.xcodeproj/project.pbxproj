@@ -25,6 +25,7 @@
 		0E9BC3E11F1561870032CC05 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3E01F1561870032CC05 /* Movie.swift */; };
 		0E9BC3E31F1562980032CC05 /* SearchMoviesAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3E21F1562980032CC05 /* SearchMoviesAPIClient.swift */; };
 		0E9BC3E91F156D7C0032CC05 /* CachingProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3E81F156D7C0032CC05 /* CachingProvider.swift */; };
+		0E9BC3EB1F1575980032CC05 /* MoviesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC3EA1F1575980032CC05 /* MoviesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,7 @@
 		0E9BC3E01F1561870032CC05 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0E9BC3E21F1562980032CC05 /* SearchMoviesAPIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesAPIClient.swift; sourceTree = "<group>"; };
 		0E9BC3E81F156D7C0032CC05 /* CachingProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingProvider.swift; sourceTree = "<group>"; };
+		0E9BC3EA1F1575980032CC05 /* MoviesProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				0E9BC3E81F156D7C0032CC05 /* CachingProvider.swift */,
+				0E9BC3EA1F1575980032CC05 /* MoviesProvider.swift */,
 			);
 			path = Providers;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E9BC3EB1F1575980032CC05 /* MoviesProvider.swift in Sources */,
 				0E9BC3E91F156D7C0032CC05 /* CachingProvider.swift in Sources */,
 				0E9BC3E31F1562980032CC05 /* SearchMoviesAPIClient.swift in Sources */,
 				0E54123E1F154ADE00099B8C /* ViewController.swift in Sources */,
