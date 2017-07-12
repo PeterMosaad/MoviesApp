@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MBProgressHUD
 
 class SearchMoviesViewController: UIViewController {
   
@@ -69,10 +70,13 @@ extension SearchMoviesViewController: SearchMoviesScreen {
 
   func showLoadingView() {
     view.endEditing(true)
+    let loadingNotification = MBProgressHUD.showAdded(to: view, animated: true)
+    loadingNotification.mode = MBProgressHUDMode.indeterminate
+    loadingNotification.label.text = "Loading"
   }
 
   func hideLoadingView() {
-
+    MBProgressHUD.hide(for: view, animated: true)
   }
 
   func clearSearchText() {
