@@ -14,13 +14,13 @@ protocol MoviesListScreen: class {
 }
 
 class MoviesListPresenter {
-  private let moviesProvider: MoviesProvider
+  private let searchClient: SearchMoviesServiceClient
   private let posterURLBuilder: MoviesPosterURLBuilder
   private var usedSearchQuery: String?
   weak private var viewController: MoviesListScreen?
 
-  init(moviesProvider: MoviesProvider, viewController: MoviesListScreen, posterBuilder: MoviesPosterURLBuilder) {
-    self.moviesProvider = moviesProvider
+  init(searchClient: SearchMoviesServiceClient, viewController: MoviesListScreen, posterBuilder: MoviesPosterURLBuilder) {
+    self.searchClient = searchClient
     self.viewController = viewController
     self.posterURLBuilder = posterBuilder
   }
@@ -52,14 +52,26 @@ class MoviesListPresenter {
       viewController?.endTableRefreshing()
       return
     }
-    moviesProvider.searchMovies(query: query) { [weak self] (moviesList, error) in
+    let parameters = SearchMovieRequestParameters(searchQuery: query)
+    let resource = searchClient.searchMovies(parameters)
+    resource.addObserver(owner: self, closure: { [weak self] (resource, event) in
       guard let `self` = self else { return }
-      if let results = moviesList, results.count > 0 {
-        let viewModels = self.viewModelsFrom(moviesList: results)
-        self.viewController?.updateMoviesTable(moviesList: viewModels)
-      } else {
+
+      switch event {
+      case .newData, .notModified:
+        if let values = resource.latestData?.content as? [Movie] {
+          let viewModels = self.viewModelsFrom(moviesList: values)
+          self.viewController?.updateMoviesTable(moviesList: viewModels)
+          self.viewController?.endTableRefreshing()
+          resource.removeObservers(ownedBy: self)
+        }
+      case .error:
         self.viewController?.updateMoviesTable(moviesList: [])
+        resource.removeObservers(ownedBy: self)
+        break
+      default:
+        return
       }
-    }
+    }).load()
   }
 }

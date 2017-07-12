@@ -30,7 +30,7 @@ class MoviesManager: MoviesProvider {
     if let cached = cachingProvider.load(objectForKey: cachingKey) as? [String] {
       queriesList.append(contentsOf: cached)
     }
-    if queriesList.count == maxCacheSize {
+    if queriesList.count > maxCacheSize {
       queriesList.removeLast()
     }
     if let index = queriesList.index(of: query) {
@@ -43,8 +43,8 @@ class MoviesManager: MoviesProvider {
   func searchMovies(query: String, completion: @escaping (_ :[Movie]?, _ :Error?) -> Void) {
 
     let parameters = SearchMovieRequestParameters(searchQuery: query)
-
-    searchClient.searchMovies(parameters).addObserver(owner: self, closure: { [weak self] (resource, event) in
+    let resource = searchClient.searchMovies(parameters)
+    resource.addObserver(owner: self, closure: { [weak self] (resource, event) in
       guard let `self` = self else { return }
 
       switch event {
@@ -54,9 +54,11 @@ class MoviesManager: MoviesProvider {
             self.addSearchQueryToCache(query: query)
           }
           completion(values, nil)
+          resource.removeObservers(ownedBy: self)
         }
       case .error:
         completion(nil, resource.latestError?.cause)
+        resource.removeObservers(ownedBy: self)
         break
       default:
         return
