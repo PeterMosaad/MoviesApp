@@ -33,6 +33,8 @@
 		0E9BC4011F15C7BD0032CC05 /* SearchMoviesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC4001F15C7BD0032CC05 /* SearchMoviesViewController.swift */; };
 		0E9BC4031F15E1320032CC05 /* MBProgressHUD.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC4021F15E1320032CC05 /* MBProgressHUD.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E9BC4041F15E13E0032CC05 /* MBProgressHUD.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC4021F15E1320032CC05 /* MBProgressHUD.framework */; };
+		0E9BC4061F15E91D0032CC05 /* AlamofireImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC4051F15E91D0032CC05 /* AlamofireImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0E9BC4071F15E9270032CC05 /* AlamofireImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC4051F15E91D0032CC05 /* AlamofireImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				0E9BC4061F15E91D0032CC05 /* AlamofireImage.framework in CopyFiles */,
 				0E9BC4031F15E1320032CC05 /* MBProgressHUD.framework in CopyFiles */,
 				0E9BC3CD1F1554440032CC05 /* Unbox.framework in CopyFiles */,
 				0E9BC3CE1F1554440032CC05 /* Siesta.framework in CopyFiles */,
@@ -88,6 +91,7 @@
 		0E9BC3FD1F15C3A50032CC05 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0E9BC4001F15C7BD0032CC05 /* SearchMoviesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchMoviesViewController.swift; sourceTree = "<group>"; };
 		0E9BC4021F15E1320032CC05 /* MBProgressHUD.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MBProgressHUD.framework; path = ../Carthage/Build/iOS/MBProgressHUD.framework; sourceTree = "<group>"; };
+		0E9BC4051F15E91D0032CC05 /* AlamofireImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AlamofireImage.framework; path = ../Carthage/Build/iOS/AlamofireImage.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,7 @@
 				0E9BC4041F15E13E0032CC05 /* MBProgressHUD.framework in Frameworks */,
 				0E9BC3D11F15545A0032CC05 /* Unbox.framework in Frameworks */,
 				0E9BC3D21F15545A0032CC05 /* Siesta.framework in Frameworks */,
+				0E9BC4071F15E9270032CC05 /* AlamofireImage.framework in Frameworks */,
 				0E9BC3D31F15545A0032CC05 /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -162,6 +167,7 @@
 		0E9BC3D01F15544B0032CC05 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				0E9BC4051F15E91D0032CC05 /* AlamofireImage.framework */,
 				0E9BC4021F15E1320032CC05 /* MBProgressHUD.framework */,
 				0E9BC3CA1F1554440032CC05 /* Unbox.framework */,
 				0E9BC3CB1F1554440032CC05 /* Siesta.framework */,

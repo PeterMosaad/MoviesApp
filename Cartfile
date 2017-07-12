@@ -7,3 +7,6 @@ github "johnsundell/unbox" ~> 2.5.0
 
 #UI
 github "jdg/MBProgressHUD" ~> 1.0.0
+
+#Image Lazy Loading
+github "Alamofire/AlamofireImage" ~> 3.1
