@@ -37,6 +37,9 @@
 		0E9BC4091F15E9BB0032CC05 /* MoviesListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC4081F15E9BB0032CC05 /* MoviesListPresenter.swift */; };
 		0E9BC4101F16B7B40032CC05 /* MoviesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9BC40F1F16B7B40032CC05 /* MoviesListViewController.swift */; };
 		0EB2F1E61F16D7D7003547D4 /* MovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1E51F16D7D7003547D4 /* MovieCell.swift */; };
+		0EB2F1EA1F16E5E9003547D4 /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */; };
+		0EB2F1EB1F16E699003547D4 /* Siesta.framework in Resources */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; };
+		0EB2F1EC1F16E6A5003547D4 /* Siesta.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,7 @@
 		0E9BC4081F15E9BB0032CC05 /* MoviesListPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListPresenter.swift; sourceTree = "<group>"; };
 		0E9BC40F1F16B7B40032CC05 /* MoviesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesListViewController.swift; sourceTree = "<group>"; };
 		0EB2F1E51F16D7D7003547D4 /* MovieCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieCell.swift; sourceTree = "<group>"; };
+		0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB2F1EC1F16E6A5003547D4 /* Siesta.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +168,7 @@
 			children = (
 				0E5412501F154ADE00099B8C /* MoviesAppTests.swift */,
 				0E5412521F154ADE00099B8C /* Info.plist */,
+				0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */,
 			);
 			path = MoviesAppTests;
 			sourceTree = "<group>";
@@ -329,6 +335,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EB2F1EB1F16E699003547D4 /* Siesta.framework in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E5412511F154ADE00099B8C /* MoviesAppTests.swift in Sources */,
+				0EB2F1EA1F16E5E9003547D4 /* APIClientTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -526,6 +534,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MoviesAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = organization.MoviesAppTests;
@@ -540,6 +552,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = MoviesAppTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = organization.MoviesAppTests;
