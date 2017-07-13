@@ -67,6 +67,7 @@ class MoviesListPresenter {
         }
       case .error:
         self.viewController?.updateMoviesTable(moviesList: [])
+        self.viewController?.endTableRefreshing()
         resource.removeObservers(ownedBy: self)
         break
       default:
