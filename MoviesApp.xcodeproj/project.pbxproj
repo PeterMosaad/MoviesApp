@@ -43,6 +43,7 @@
 		0EB2F1EE1F16EC2A003547D4 /* CachingProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */; };
 		0EB2F1F01F1795BC003547D4 /* MoviesProviderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1EF1F1795BC003547D4 /* MoviesProviderTests.swift */; };
 		0EB2F1F61F17C33B003547D4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1F51F17C33B003547D4 /* Mocks.swift */; };
+		0EB2F1FA1F181177003547D4 /* ViewModelBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB2F1F91F181177003547D4 /* ViewModelBuilderTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,6 +107,7 @@
 		0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CachingProviderTests.swift; sourceTree = "<group>"; };
 		0EB2F1EF1F1795BC003547D4 /* MoviesProviderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoviesProviderTests.swift; sourceTree = "<group>"; };
 		0EB2F1F51F17C33B003547D4 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		0EB2F1F91F181177003547D4 /* ViewModelBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelBuilderTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 				0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */,
 				0EB2F1F51F17C33B003547D4 /* Mocks.swift */,
 				0EB2F1EF1F1795BC003547D4 /* MoviesProviderTests.swift */,
+				0EB2F1F91F181177003547D4 /* ViewModelBuilderTests.swift */,
 			);
 			path = MoviesAppTests;
 			sourceTree = "<group>";
@@ -382,6 +385,7 @@
 				0EB2F1F01F1795BC003547D4 /* MoviesProviderTests.swift in Sources */,
 				0EB2F1EE1F16EC2A003547D4 /* CachingProviderTests.swift in Sources */,
 				0EB2F1EA1F16E5E9003547D4 /* APIClientTests.swift in Sources */,
+				0EB2F1FA1F181177003547D4 /* ViewModelBuilderTests.swift in Sources */,
 				0EB2F1F61F17C33B003547D4 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
