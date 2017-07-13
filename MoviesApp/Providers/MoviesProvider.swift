@@ -30,13 +30,13 @@ class MoviesManager: MoviesProvider {
     if let cached = cachingProvider.load(objectForKey: cachingKey) as? [String] {
       queriesList.append(contentsOf: cached)
     }
-    if queriesList.count == maxCacheSize {
-      queriesList.removeLast()
-    }
     if let index = queriesList.index(of: query) {
       queriesList.remove(at:index)
     }
     queriesList.insert(query, at: 0)
+    if queriesList.count > maxCacheSize {
+      queriesList.removeLast()
+    }
     cachingProvider.cache(object: queriesList, forKey: cachingKey)
   }
 
