@@ -11,7 +11,6 @@
 		0E5412411F154ADE00099B8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E54123F1F154ADE00099B8C /* Main.storyboard */; };
 		0E5412431F154ADE00099B8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0E5412421F154ADE00099B8C /* Assets.xcassets */; };
 		0E5412461F154ADE00099B8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E5412441F154ADE00099B8C /* LaunchScreen.storyboard */; };
-		0E5412511F154ADE00099B8C /* MoviesAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5412501F154ADE00099B8C /* MoviesAppTests.swift */; };
 		0E9BC3CD1F1554440032CC05 /* Unbox.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC3CA1F1554440032CC05 /* Unbox.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E9BC3CE1F1554440032CC05 /* Siesta.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC3CB1F1554440032CC05 /* Siesta.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		0E9BC3CF1F1554440032CC05 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0E9BC3CC1F1554440032CC05 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -83,7 +82,6 @@
 		0E5412451F154ADE00099B8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E5412471F154ADE00099B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E54124C1F154ADE00099B8C /* MoviesAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MoviesAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		0E5412501F154ADE00099B8C /* MoviesAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesAppTests.swift; sourceTree = "<group>"; };
 		0E5412521F154ADE00099B8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0E9BC3CA1F1554440032CC05 /* Unbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Unbox.framework; path = ../Carthage/Build/iOS/Unbox.framework; sourceTree = "<group>"; };
 		0E9BC3CB1F1554440032CC05 /* Siesta.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Siesta.framework; path = ../Carthage/Build/iOS/Siesta.framework; sourceTree = "<group>"; };
@@ -178,7 +176,6 @@
 		0E54124F1F154ADE00099B8C /* MoviesAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				0E5412501F154ADE00099B8C /* MoviesAppTests.swift */,
 				0E5412521F154ADE00099B8C /* Info.plist */,
 				0EB2F1E91F16E5E9003547D4 /* APIClientTests.swift */,
 				0EB2F1ED1F16EC2A003547D4 /* CachingProviderTests.swift */,
@@ -387,7 +384,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E5412511F154ADE00099B8C /* MoviesAppTests.swift in Sources */,
 				0EB2F1F01F1795BC003547D4 /* MoviesProviderTests.swift in Sources */,
 				0EB2F1EE1F16EC2A003547D4 /* CachingProviderTests.swift in Sources */,
 				0EB2F1FE1F1828ED003547D4 /* MoviesListPresenterTests.swift in Sources */,
